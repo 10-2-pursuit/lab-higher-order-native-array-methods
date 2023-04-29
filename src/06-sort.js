@@ -26,17 +26,20 @@ function sortByRuntimeAscending(songs) {
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
-  return songs.sort((a,b) =>{ const nameB = b.artist.toLowerCase();
-                            const nameA = a.artist.toLowerCase();
-                          if(nameB < nameA){
-                            return -1;
-                          }
-                        else if(nameB > nameA){
-                          return 1;
-                        }
-                      else{
-                        return 0;
-                      }});
+  return songs.sort((a,b) =>{ 
+                              const nameB = b.artist.toLowerCase();
+                              const nameA = a.artist.toLowerCase();
+                          
+                              if(nameB < nameA){
+                                return -1;
+                              }
+                              else if(nameB > nameA){
+                                return 1;
+                              }
+                              else{
+                                return 0;
+                              }
+                            });
 }
 
 /**
@@ -48,17 +51,19 @@ function sortByArtistNameDescending(songs) {
  * @returns {Object[]}
  */
 function sortBySongTitleAscending(songs) {
-  return songs.sort((a,b) =>{ const nameB = b.title.toLowerCase();
-    const nameA = a.title.toLowerCase();
-  if(nameB < nameA){
-    return 1;
-  }
-else if(nameB > nameA){
-  return -1;
-}
-else{
-return 0;
-}});
+  return songs.sort((a,b) =>{ 
+                              const nameB = b.title.toLowerCase();
+                              const nameA = a.title.toLowerCase();
+                              if(nameB < nameA){
+                                return 1;
+                              }
+                              else if(nameB > nameA){
+                                return -1;
+                              }
+                              else{
+                                return 0;
+                              }
+                            });
 }
 
 module.exports = {
