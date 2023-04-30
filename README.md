@@ -3,7 +3,6 @@
 You've been tasked with building functionality for a music application that wants to allow its users to quickly search and sort through their favorite playlists. Use your knowledge of higher order native array methods to solve this functions.
 
 ## Getting started
-
 1. Fork and clone this repository.
 
 1. Navigate to the cloned repository's directory on your command line. Then, run the following command:
