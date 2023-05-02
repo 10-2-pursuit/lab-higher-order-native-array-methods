@@ -32,7 +32,7 @@ function getSongsOverThreeMinutes(songs) {
  * @returns {Object[]} An array of objects.
  */
 function getTitleTracks(songs) {
-    return 
+    return songs.filter(song => song.title === song.album);
 }
 
 module.exports = {
