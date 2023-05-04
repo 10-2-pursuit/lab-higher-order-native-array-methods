@@ -13,21 +13,50 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsBySaib(songs) {}
+function getSongsBySaib(songs) {
+  let songBySaib = null
+  let songsBySaib = songs.filter((song) => {
+    if(song.artist === "Saib"){
+      songBySaib = song
+      return songBySaib
+    }
+  })
+  return songsBySaib
+}
+
+
 
 /**
  * Returns an array of all songs where the runtime is over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsOverThreeMinutes(songs) {}
+function getSongsOverThreeMinutes(songs) {
+  let songOverThreeMinuites = null
+  let songsOverThreeMinuites = songs.filter((song) => {
+    if((song.runtimeInSeconds > 180)){
+      songOverThreeMinuites = song
+      return songOverThreeMinuites
+    }
+    })
+  return songsOverThreeMinuites
+}
 
 /**
  * Returns an array of songs where the song title is the same as the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getTitleTracks(songs) {}
+function getTitleTracks(songs) {
+  let sameSongTitleAsAlbum = null
+  let sameSongTitlesAsAlbums = songs.filter((song) => {
+    if((song.title === song.album)){
+      sameSongTitleAsAlbum = song
+      return sameSongTitleAsAlbum
+    }
+    })
+  return sameSongTitlesAsAlbums
+}
 
 module.exports = {
   getSongsBySaib,
