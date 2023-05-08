@@ -37,13 +37,31 @@ function printAllSongTitles(songs) {
  *  //> "Up by Sebastian Kamae"
  *  //> ...
  */
-function printSongDetails(songs) {}
+function printSongDetails(songs) {
+  const songDetails = [];
+  songs.forEach(song => {
+    const details = `${song.title} by ${song.artist}`;
+    songDetails.push(details);
+  });
+  return songDetails;
+  
+  console.log(songDetails)
+}
 
 /**
  * Logs out all of the song titles which have a runtime over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printSongTitlesOverThreeMinutes(songs) {}
+function printSongTitlesOverThreeMinutes(songs) {
+  const songTitles = [];
+  songs.forEach(song => {
+    if (song.runtimeInSeconds > 180) {
+      songTitles.push(song.title);
+    }
+  });
+  return songTitles;
+}
+
 
 module.exports = {
   printAllSongTitles,
