@@ -40,8 +40,8 @@ function printSongDetails(songs) {
  */
 function printSongTitlesOverThreeMinutes(songs,runtimeInSeconds) {
   songs.forEach(function(song) {
-      if (runtimeInSeconds > 180){
-        console.log(song.title);
+      if (songs.runtimeInSeconds >= 180){
+        console.log(`${song.title}` `${song.runtimeInSeconds}`);
       }
     });
 }
