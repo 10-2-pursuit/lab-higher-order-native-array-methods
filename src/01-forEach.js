@@ -43,7 +43,8 @@ function printSongTitlesOverThreeMinutes(songs,runtimeInSeconds) {
       if (songs.runtimeInSeconds >= 180){
         console.log(`${song.title}` `${song.runtimeInSeconds}`);
       }
-    });
+    },
+   [], );
 }
 
 module.exports = {
