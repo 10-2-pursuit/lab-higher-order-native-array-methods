@@ -34,7 +34,7 @@ function getSongTitles ( songs )
  */ 
 function getSongDetails ( songs )
 {
-  const songDetails = songs.map( songs => { return `{ songs.title } by ${ songs.artist }`; } )
+  const songDetails = songs.map( songs => { return `${ songs.title } by ${ songs.artist }` } )
   return songDetails
 }
 
@@ -49,12 +49,12 @@ function getSongDetails ( songs )
  */
 function getTitleAndArtist ( songs )
 {
-  const titleAndArtist = songs.map( songs => { return { songs.title : songs.artist}
-  } ) 
-  return titleAndArtist
-} 
-  
-
+  let { title, artist } = songs;
+  const titleAndArtist = songs.map( songs =>
+  {
+    return ( { `${ title }: ${ artist }`} );
+  } );
+}
 module.exports = {
   getSongTitles,
   getSongDetails,
